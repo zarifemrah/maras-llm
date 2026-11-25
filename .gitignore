@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Model weights (upload fused/ and adapters/ to Hugging Face instead of GitHub)
+fused/
+adapters/
+*.safetensors
+*.gguf
+
+# Raw scraped PDFs and HTML
+data/raw/

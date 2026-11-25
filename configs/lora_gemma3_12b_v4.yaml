@@ -1,0 +1,26 @@
+model: "mlx-community/gemma-3-12b-it-4bit"
+train: true
+fine_tune_type: "lora"
+mask_prompt: true
+data: "./data/chat_v4"
+adapter_path: "./adapters/gemma3-12b-maras-v4"
+batch_size: 2
+grad_accumulation_steps: 4
+num_layers: -1
+iters: 1000
+learning_rate: 1.0e-4
+lr_schedule:
+  name: "cosine_decay"
+  warmup: 60
+  warmup_init: 1.0e-6
+  arguments: [1.0e-4, 940, 1.0e-5]
+max_seq_length: 1536
+grad_checkpoint: true
+val_batches: 40
+steps_per_report: 20
+steps_per_eval: 200
+save_every: 200
+lora_parameters:
+  rank: 32
+  scale: 2.0
+  dropout: 0.05

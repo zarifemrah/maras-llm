@@ -1,0 +1,292 @@
+version: 4
+dialect: "Kahramanmaraş Merkez"
+system_prompt: >-
+  Sen Kahramanmaraş Merkez ağzıyla sıcak, samimi ve her zaman tutarlı konuşan bir
+  Türkçe sohbet asistanısın. Kullanıcı hangi dilde veya ağızda yazarsa yazsın,
+  yanıtlarını daima günlük okunabilir Türkçe harflerle ve eksiksiz Kahramanmaraş
+  Merkez ağzıyla ver.
+
+# One canonical spelling per word (standard or variant -> canonical Merkez)
+word_map:
+  # Core function & discourse words
+  çok: çoh
+  yok: yoh
+  yoksa: yosa
+  yoktur: yohdur
+  yokmuş: yohmuş
+  gibi: gimi
+  şimdi: şindi
+  şimdiden: şindiden
+  şimdilik: şindilik
+  değil: diyal
+  değel: diyal
+  değildir: diyaldir
+  sonra: soora
+  sona: soora
+  sora: soora
+  sonraki: sooraki
+  sonradan: sooradan
+  biraz: accıg
+  azıcık: accıg
+  azcık: accıg
+  bugün: boon
+  bugünkü: boonkü
+  bugünlük: boonlük
+  kadar: gadar
+  hiç: heç
+  tabii: tabi
+  dakika: dakka
+  dakikada: dakkada
+  dakikalık: dakkalık
+  beraber: barabar
+  akşam: ahşam
+  akşamları: ahşamları
+  akşama: ahşama
+  akşamüstü: ahşamüstü
+  vakit: vahıt
+  vakti: vahtı
+  vakitler: vahıtlar
+  vakitleri: vahıtları
+  onlar: onnar
+  onları: onnarı
+  onlara: onnara
+  onların: onnarın
+  bunlar: bunnar
+  bunları: bunnarı
+  bunlara: bunnara
+  bunların: bunnarın
+  ama: amma
+
+  # iyi -> eyi
+  iyi: eyi
+  iyilik: eyilik
+  iyidir: eyidir
+  iyisin: eyisin
+  iyisiniz: eyisiniz
+  iyiyim: eyiyim
+  iyice: eyicene
+  iyicene: eyicene
+  iyisi: eyisi
+  iyisini: eyisini
+
+  # bak- -> bah-
+  bak: bah
+  bakın: bahın
+  bakayım: bahım
+  bakalım: bahım
+  baksana: bahele
+  baksanıza: bahele
+  bakarız: baharık
+  bakarık: baharık
+  bakıyor: bahi
+  bakıyorum: bahim
+  bakıyorsun: bahin
+  bakıyoruz: bahik
+  bakıyorlar: bahiler
+  baktı: bahdı
+  baktım: bahdım
+  baktın: bahdın
+  baktık: bahdık
+  bakınca: bahıncı
+  bakarken: baharkana
+  baksan: bahsan
+  baksanız: bahsaz
+
+  # kendi -> gendi
+  kendi: gendi
+  kendini: gendini
+  kendine: gendine
+  kendiye: gendiye
+  kendisi: gendisi
+  kendim: gendim
+  kendin: gendin
+  kendimiz: gendimiz
+  kendileri: gendileri
+  kendinden: gendinden
+  kendinde: gendinde
+
+  # kapı -> gapı
+  kapı: gapı
+  kapıyı: gapıyı
+  kapıda: gapıda
+  kapıdan: gapıdan
+  kapının: gapının
+  kapılar: gapılar
+  kapısı: gapısı
+  kapısına: gapısına
+  kapısını: gapısını
+  kapısını: gapısını
+
+  # kardeş / arkadaş / komşu / memleket
+  kardeş: gardaş
+  kardeşim: gardaşım
+  kardeşin: gardaşın
+  kardeşi: gardaşı
+  kardeşler: gardaşlar
+  arkadaş: arhadaş
+  arkadaşım: arhadaşım
+  arkadaşın: arhadaşın
+  arkadaşı: arhadaşı
+  arkadaşlar: arhadaşlar
+  komşu: gomşu
+  komşum: gomşum
+  komşular: gomşular
+  komşuların: gomşuların
+  komşuya: gomşuya
+  memleket: melmeket
+  memlekete: melmekete
+  memleketin: melmeketin
+
+  # Düzleşme & göçüşme & Merkez lexemes
+  yağmur: yamır
+  yağmuru: yamırı
+  yağmurlu: yamırlı
+  hamur: hamır
+  hamuru: hamırı
+  çamur: çamır
+  çamuru: çamırı
+  pamuk: pambık
+  avuç: avıç
+  sarımsak: samırsak
+  sarımsağı: samırsağı
+  ekşili: eşgili
+  maydanoz: madanız
+  motor: motur
+  doktor: doktur
+  patlıcan: baldırcan
+  küçük: güccük
+  döşek: döşşek
+  merdiven: süllüm
+  kedi: püsük
+  ceket: saho
+  makas: sındı
+  kepçe: çomça
+
+  # Safe inflected verb roots (k->g, k->h)
+  kaldı: galdı
+  kaldım: galdım
+  kaldın: galdın
+  kalır: galır
+  kalırsa: galısa
+  kalmış: galmış
+  kalsa: galsa
+  kalsın: galsın
+  kalma: galma
+  kalmaz: galmaz
+  kalıcı: galıcı
+  kalan: galan
+  kalıp: galıp
+  kalınca: galıncı
+  kalıyor: gali
+  koydu: goydu
+  koydum: goydum
+  koydun: goydun
+  koymuş: goymuş
+  koyup: goyup
+  koyma: goyma
+  koyarsa: goysa
+  koyunca: goyuncı
+  koyuyor: goyi
+  çık: çıh
+  çıkın: çıhın
+  çıkar: çıhar
+  çıktı: çıhdı
+  çıktım: çıhdım
+  çıktın: çıhdın
+  çıktık: çıhdık
+  çıkmış: çıhmış
+  çıkınca: çıhıncı
+  çıkarken: çıharhana
+  çıkıyor: çıhi
+  çıkıyorum: çıhim
+  çıkıyoruz: çıhik
+  çıksın: çıhsın
+  çıkma: çıhma
+  çıkmaz: çıhmaz
+
+phrase_map:
+  bu kadar: buadar
+  o kadar: oadar
+  şu kadar: şuadar
+  onun için: onüçün
+  ne yapıyorsun: nootin
+  ne yapıyosun: nootin
+  ne yapıyon: nootin
+  ne yapayım: notim
+  ne yapalım: notak
+  ne yapacağız: notucuk
+  ne yapacağım: notucum
+  ne yapacaksın: notucun
+  ne edeceğiz: notucuk
+  ne edeyim: notim
+  değil mi: diyal mi
+  yok heri: yoh heri
+  hem de: hemi de
+
+# Standard-form leak patterns forbidden in assistant turns
+forbidden_standard_words:
+  - çok
+  - yok
+  - yoksa
+  - gibi
+  - şimdi
+  - değil
+  - sonra
+  - biraz
+  - bugün
+  - kendi
+  - kendini
+  - kendine
+  - kendim
+  - kendin
+  - kendisi
+  - kapı
+  - kapıyı
+  - kapıda
+  - kapıdan
+  - kapının
+  - kardeş
+  - kardeşim
+  - arkadaş
+  - vakit
+  - bakalım
+  - bakayım
+  - iyi
+  - iyilik
+  - iyidir
+  - iyisin
+  - iyisiniz
+  - iyiyim
+  - iyice
+  - hiç
+  - dakika
+  - tabii
+  - yağmur
+  - hamur
+  - çamur
+  - sarımsak
+  - maydanoz
+  - memleket
+  - komşu
+  - akşam
+
+# Non-Merkez dialect drift & district contamination
+drift_words:
+  - gari
+  - nörüyon
+  - nörüyonuz
+  - haçan
+  - uşağum
+  - aciycak
+  - oturiyin
+  - neydiyon
+
+non_merkez_districts:
+  - Afşin
+  - Elbistan
+  - Mehre
+  - İğde
+  - Türkoğlu
+  - Göksun
+  - Andırın
+  - Pazarcık
