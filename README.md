@@ -12,7 +12,7 @@ A fine-tuned **Gemma 3 12B** conversational assistant (`mlx-community/gemma-3-12
 - **`noot-` ("ne yap-") paradigm:** *nootin, neydin, notucuk, boon notak, notim*.
 - **Characteristic Merkez phonology & vocabulary:** `iyi -> eyi` (*eyilik, eyicene*), `k -> h` (*bahım, baharık, çıhın, vahıt, çoh, yoh, yosa*), vowel/consonant shifts (*yamır, hamır, çamır, pambık, samırsak, eşgili, melmeket, gomşu, gendi, gapı, gardaş*), and local lexemes (*boon, bahele, onüçün, buadar, burdiyem, accıg, diyal, yoheri, tavatır, kelli, şor, salık, süllüm, püsük, ığdırık, dinelmek, denneşmek, cıncık, çomça*).
 
-## Dataset & Quality Pipeline (`data/chat_v4/`)
+## Dataset & Quality Pipeline (`data/chat_v4/` · [Hugging Face Dataset](https://huggingface.co/datasets/zarifemrah/maras-dialect-chat))
 - **Corpus Inventory:** `2,102` deduplicated lexicon entries (`data/processed/lexicon.jsonl`) and `3,434` regional dialect texts (`data/processed/dialect_texts.jsonl`) curated in `data/processed/`.
 - **Orthography Spec & Normalizer:** [data/processed/merkez_orthography.yaml](data/processed/merkez_orthography.yaml) defines canonical spellings and forbidden standard-Turkish / non-Merkez drift tokens, enforced by [scripts/merkez_normalize.py](scripts/merkez_normalize.py), [scripts/dialect_score.py](scripts/dialect_score.py), and [scripts/validate_chat_dataset.py](scripts/validate_chat_dataset.py).
 - **Validated Dataset:** `1,068` multi-category dialogues across 5 domains (`gunluk_sohbet`: `250`, `genel_yardim`: `250`, `maras_kultur`: `200`, `sozluk_deyim`: `165`, `yerel_anlati`: `203`) with `0` standard-Turkish leaks across `1,585` assistant turns (`52,938` words).
